@@ -1,11 +1,15 @@
 describe SpotifyChart do
 
   describe '#initialize' do
+    # def initialize
+    # end
+
     it "does not raise error when called on with no arguments" do
       expect { SpotifyChart.new }.to_not raise_error
     end
 
     it "sets a variable 'base_url' as the root url of the Spotify Chart API" do
+
       expect(SpotifyChart.new.base_url).to eq("http://charts.spotify.com/api/charts/")
     end
   end
@@ -49,12 +53,12 @@ describe SpotifyChart do
       expect(gb_most_streamed).to eq("http://charts.spotify.com/api/charts/most_streamed/gb/latest")
       expect(us_most_shared).to eq("http://charts.spotify.com/api/charts/most_shared/us/latest")
     end
-  
+
   end # get_url
 
   describe "#get_json" do
     let(:url) { "http://api.openweathermap.org/data/2.5/weather?q=NewYork" }
-    
+
     it "accepts one argument, a JSON url" do
       expect { spotify_chart.get_json(url) }.to_not raise_error
     end
@@ -69,9 +73,9 @@ describe SpotifyChart do
   end
 
   describe "#fetch_track_album_artist" do
-     
+
     let(:json) { JSON.parse( IO.read("spec/support/us_most_streamed.json")) }
-    
+
     it "accepts one argument, a hash object" do
       expect { spotify_chart.fetch_track_album_artist(json) }.to_not raise_error
     end

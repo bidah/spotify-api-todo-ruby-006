@@ -16,7 +16,7 @@ Scraping sites is one way to get data but many times, companies will expose more
 
 ## Instructions
 * This is a test-driven lab so just get those specs to pass. Remember to start with the first specs then move to the later ones as they build on each other!
-* If you get stuck, refer to the [docs](http://charts.spotify.com/docs), the resources below, and take a look at these urls and try to pattern match: 
+* If you get stuck refer to the [docs](http://charts.spotify.com/docs), the resources below, and take a look at these urls and try to pattern match:
   * [http://charts.spotify.com/api/charts/]( http://charts.spotify.com/api/charts/)
   * [http://charts.spotify.com/api/charts/most_shared](http://charts.spotify.com/api/charts/most_shared)
 
